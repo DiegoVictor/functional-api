@@ -3,5 +3,4 @@ node_modules
 tests/coverage
 *.log
 .env
-.build
 output.txt
