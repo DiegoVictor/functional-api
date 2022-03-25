@@ -7,9 +7,10 @@
   "engines": {
     "node": "14"
   },
-  },
   "scripts": {
     "build": "tsc",
+    "dev:server": "npm run build && node dist/index.js"
+  },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
