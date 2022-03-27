@@ -1,4 +1,4 @@
-import { featureFlagService } from '../../application/use-cases/feature-flag';
+import { featureFlagService } from '../../application/use-cases';
 import { featureFlatRepository } from '../../infra/repositories';
 import { IFeatureFlag } from '../../application/contracts/IFeatureFlag';
 
