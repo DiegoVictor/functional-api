@@ -1,5 +1,6 @@
 export interface IFeatureFlag {
   id: string;
-  feature: string;
-  status: boolean;
+  key: string;
+  description?: string;
+  active: boolean;
 }
