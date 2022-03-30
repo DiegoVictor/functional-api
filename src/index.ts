@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
-import { featureFlagController } from './handlers';
+import { featureFlagController, randomNameController } from './handlers';
 
 const app = express();
 
@@ -20,6 +20,11 @@ app.get('/featureFlags/:key', async (request, response) => {
   return response.status(404).json({
     message: 'Feature flag not found',
   });
+});
+
+app.get('/randomNames', async (_, response) => {
+  const names = await randomNameController.getRandom();
+  response.json(names);
 });
 
 app.listen(process.env.PORT);
