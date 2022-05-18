@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import { IFeatureFlagRepository } from 'src/application/contracts/IFeatureFlagRepository';
 import { IFeatureFlag } from '../../application/contracts/IFeatureFlag';
 
 const flags: IFeatureFlag[] = [
@@ -9,12 +10,10 @@ const flags: IFeatureFlag[] = [
   },
 ];
 
-export const getAll = async (): Promise<IFeatureFlag[]> => {
-  return flags;
-};
+export const getAll: IFeatureFlagRepository['getAll'] = async (): Promise<
+  IFeatureFlag[]
+> => flags;
 
-export const getOneByKey = async (
+export const getOneByKey: IFeatureFlagRepository['getOneByKey'] = async (
   key: string
-): Promise<IFeatureFlag | undefined> => {
-  return flags.find((flag) => flag.key === key);
-};
+): Promise<IFeatureFlag | undefined> => flags.find((flag) => flag.key === key);
