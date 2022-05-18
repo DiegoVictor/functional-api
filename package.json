@@ -1,7 +1,8 @@
 {
-  "name": "clouds-witcher",
+  "name": "api-huddle",
   "version": "1.0.0",
-  "repository": "git@github.com:DiegoVictor/clouds-witcher.git",
+  "main": "index.js",
+  "repository": "git@github.com:DiegoVictor/api-huddle.git",
   "author": "Diego Victor <diegovictorgonzaga@gmail.com>",
   "license": "MIT",
   "engines": {
