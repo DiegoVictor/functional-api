@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
+
 import { featureFlagController, randomNameController } from './handlers';
 
 const app = express();

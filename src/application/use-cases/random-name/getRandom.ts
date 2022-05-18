@@ -1,4 +1,4 @@
-import { IFeatureFlagRepository } from 'src/application/contracts/IFeatureFlagRepository';
+import { IFeatureFlagRepository } from '../../contracts/IFeatureFlagRepository';
 import { getNames } from '../../../infra/services/named';
 
 export const getRandom = async (
