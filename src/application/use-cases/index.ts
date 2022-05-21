@@ -1,2 +1,2 @@
-export * as featureFlagService from './feature-flag';
-export * as randomNameService from './random-name';
+export * as featureFlag from './feature-flag';
+export * as randomName from './random-name';
