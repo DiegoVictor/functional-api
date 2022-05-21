@@ -1,12 +1,16 @@
 import { IFeatureFlagRepository } from '../../contracts/IFeatureFlagRepository';
-import { getNames } from '../../../infra/services/named';
+import { INameService } from '../../contracts/INameService';
+import { resolve } from '../../services/resolve';
 
-export const getRandom = async (
-  featureFlatRepository: IFeatureFlagRepository
-): Promise<string[] | string> => {
+export const getRandom = async (): Promise<string[] | string> => {
+  const featureRepository = resolve<IFeatureFlagRepository>(
+    'FeatureFlagRepository'
+  );
+  const nameService = resolve<INameService>('NameService');
+
   const [featureFlag, names] = await Promise.all([
-    featureFlatRepository.getOneByKey('encode_output'),
-    getNames(),
+    featureRepository.getOneByKey('encode_output'),
+    nameService.getNames(),
   ]);
 
   const shouldEncode = featureFlag && featureFlag.active;
