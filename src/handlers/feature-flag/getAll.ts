@@ -1,6 +1,11 @@
-import { featureFlagService } from '../../application/use-cases';
-import { featureFlatRepository } from '../../infra/repositories';
-import { IFeatureFlag } from '../../application/contracts/IFeatureFlag';
+import { Request, Response } from 'express';
 
-export const getAll = async (): Promise<IFeatureFlag[]> =>
-  featureFlagService.getAll(featureFlatRepository);
+import { featureFlag } from '../../application/use-cases';
+
+export const getAll = async (
+  _: Request,
+  response: Response
+): Promise<Response> => {
+  const flags = await featureFlag.getAll();
+  return response.json(flags);
+};

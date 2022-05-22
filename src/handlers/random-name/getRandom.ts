@@ -1,5 +1,11 @@
-import { randomNameService } from '../../application/use-cases';
-import { featureFlatRepository } from '../../infra/repositories';
+import { Request, Response } from 'express';
 
-export const getRandom = async (): Promise<string[] | string> =>
-  randomNameService.getRandom(featureFlatRepository);
+import { randomName } from '../../application/use-cases';
+
+export const getRandom = async (
+  _: Request,
+  response: Response
+): Promise<Response> => {
+  const names = await randomName.getRandom();
+  return response.json(names);
+};
