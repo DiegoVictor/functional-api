@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev:server": "npm run build && node dist/infra/http/server.js",
+    "dev:server": "nodemon --watch src --ext js,ts --exec \"npm run build && node dist/infra/http/server.js\"",
     "test": "jest --runInBand"
   },
   "devDependencies": {
@@ -28,6 +28,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.0",
+    "nodemon": "^2.0.16",
     "prettier": "^2.6.0",
     "ts-jest": "^28.0.2",
     "ts-node": "^10.7.0",
