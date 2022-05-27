@@ -26,7 +26,13 @@ export default {
   coverageDirectory: 'tests/coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: ['contracts', 'infra', 'index'],
+  coveragePathIgnorePatterns: [
+    'config',
+    'contracts',
+    'entities',
+    'frameworks',
+    'index',
+  ],
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
@@ -81,7 +87,11 @@ export default {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    '@(application|config|entities|frameworks|handlers|lib)/(.+)': [
+      '<rootDir>/src/$1/$2',
+    ],
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],

@@ -7,7 +7,16 @@
     "strict": true,
     "skipLibCheck": true,
     "outDir": "dist",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@application/*": ["src/application/*"],
+      "@config/*": ["src/config/*"],
+      "@entities/*": ["src/entities/*"],
+      "@frameworks/*": ["src/frameworks/*"],
+      "@handlers/*": ["src/handlers/*"],
+      "@handlers": ["src/handlers"],
+      "@lib/*": ["src/lib/*"],
+    }
   },
-  "include": ["src"]
+  "include": ["src", "tests"]
 }
