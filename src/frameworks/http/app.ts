@@ -2,7 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 
-import { featureFlagController, randomNameController } from '../../handlers';
+import { featureFlagController, randomNameController } from '@handlers';
 
 const app = express();
 

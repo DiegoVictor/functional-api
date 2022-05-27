@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 
-import { IFeatureFlagRepository } from '../../application/contracts/IFeatureFlagRepository';
-import { IFeatureFlag } from '../../application/contracts/IFeatureFlag';
+import { IFeatureFlagRepository } from '@application/contracts/IFeatureFlagRepository';
+import { IFeatureFlag } from '@entities/IFeatureFlag';
 
 const flags: IFeatureFlag[] = [
   {

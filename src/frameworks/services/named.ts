@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { INameService } from '../../application/contracts/INameService';
+
+import { INameService } from '@application/contracts/INameService';
 
 const api = axios.create({
   baseURL: process.env.NAMED_BASE_URL,
