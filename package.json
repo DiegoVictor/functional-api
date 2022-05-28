@@ -9,8 +9,8 @@
     "node": "14"
   },
   "scripts": {
-    "build": "tsc",
-    "dev:server": "nodemon --watch src --ext js,ts --exec \"npm run build && node dist/infra/http/server.js\"",
+    "build": "tsc --project build.json",
+    "dev:server": "nodemon --watch src --ext js,ts --exec \"npm run build && node dist/frameworks/http/server.js\"",
     "test": "jest --runInBand"
   },
   "devDependencies": {

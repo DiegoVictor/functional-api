@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@application/*": ["src/application/*"],
+      "@config/*": ["src/config/*"],
+      "@entities/*": ["src/entities/*"],
+      "@frameworks/*": ["src/frameworks/*"],
+      "@handlers/*": ["src/handlers/*"],
+      "@handlers": ["src/handlers"],
+      "@lib/*": ["src/lib/*"]
+    }
+
+  },
+  "include": ["src"]
+}
