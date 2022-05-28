@@ -1,4 +1,4 @@
-import { factories } from '../../infra/factories';
+import { dependencies } from '@config/dependencies';
 
 const registry = new Map();
 
@@ -9,10 +9,10 @@ export const resolve = <T>(name: string): T => {
     return registry.get(name);
   }
 
-  if (!factories[name] || typeof factories[name] !== 'function') {
+  if (!dependencies[name] || typeof dependencies[name] !== 'function') {
     throw new Error(`No factory found for ${name}`);
   }
-  registry.set(name, factories[name]());
+  registry.set(name, dependencies[name]());
 
   return registry.get(name);
 };
