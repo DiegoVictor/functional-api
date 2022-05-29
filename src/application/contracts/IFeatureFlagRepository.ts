@@ -1,4 +1,4 @@
-import { IFeatureFlag } from './IFeatureFlag';
+import { IFeatureFlag } from '@entities/IFeatureFlag';
 
 export interface IFeatureFlagRepository {
   getAll(): Promise<IFeatureFlag[]>;

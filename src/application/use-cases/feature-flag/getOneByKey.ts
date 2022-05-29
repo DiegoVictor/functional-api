@@ -1,5 +1,5 @@
-import { resolve } from '../../services/resolve';
-import { IFeatureFlagRepository } from '../../contracts/IFeatureFlagRepository';
+import { resolve } from '@lib/resolver';
+import { IFeatureFlagRepository } from '@application/contracts/IFeatureFlagRepository';
 
 export const getOneByKey = async (key: string) => {
   const featureRepository = resolve<IFeatureFlagRepository>(

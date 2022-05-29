@@ -1,6 +1,6 @@
-import { IFeatureFlagRepository } from '../../contracts/IFeatureFlagRepository';
-import { INameService } from '../../contracts/INameService';
-import { resolve } from '../../services/resolve';
+import { IFeatureFlagRepository } from '@application/contracts/IFeatureFlagRepository';
+import { INameService } from '@application/contracts/INameService';
+import { resolve } from '@lib/resolver';
 
 export const getRandom = async (): Promise<string[] | string> => {
   const featureRepository = resolve<IFeatureFlagRepository>(

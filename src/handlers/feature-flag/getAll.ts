@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { featureFlag } from '../../application/use-cases';
+import { featureFlag } from '@application/use-cases';
 
 export const getAll = async (
   _: Request,
