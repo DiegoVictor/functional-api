@@ -3,7 +3,7 @@ install:
   - npm ci
   - npm install -g codecov
 node_js:
-  - 16
+  - 14
 script:
   - npm run test
   - codecov
