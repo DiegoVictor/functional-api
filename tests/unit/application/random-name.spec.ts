@@ -1,9 +1,9 @@
 import faker from '@faker-js/faker';
 
-import * as randomName from '../../../src/application/use-cases/random-name';
+import * as randomName from '@application/use-cases/random-name';
 
 const mockResolve = jest.fn();
-jest.mock('../../../src/application/services/resolve', () => ({
+jest.mock('@lib/resolver', () => ({
   resolve: (name: string) => mockResolve(name),
 }));
 

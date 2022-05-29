@@ -2,11 +2,11 @@ import { randomUUID } from 'crypto';
 import faker from '@faker-js/faker';
 import { getMockRes, getMockReq } from '@jest-mock/express';
 
-import * as featureFlagController from '../../../src/handlers/feature-flag';
+import * as featureFlagController from '@handlers/feature-flag';
 
 const mockGetAll = jest.fn();
 const mockGetOneByKey = jest.fn();
-jest.mock('../../../src/application/use-cases', () => ({
+jest.mock('@application/use-cases', () => ({
   featureFlag: {
     getAll: () => mockGetAll(),
     getOneByKey: () => mockGetOneByKey(),

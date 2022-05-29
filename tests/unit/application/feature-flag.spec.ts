@@ -1,10 +1,10 @@
 import { randomUUID } from 'crypto';
 import faker from '@faker-js/faker';
 
-import * as featureFlag from '../../../src/application/use-cases/feature-flag';
+import * as featureFlag from '@application/use-cases/feature-flag';
 
 const mockResolve = jest.fn();
-jest.mock('../../../src/application/services/resolve', () => ({
+jest.mock('@lib/resolver', () => ({
   resolve: (name: string) => mockResolve(name),
 }));
 

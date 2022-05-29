@@ -1,10 +1,10 @@
 import faker from '@faker-js/faker';
 import { getMockRes, getMockReq } from '@jest-mock/express';
 
-import * as randomNameController from '../../../src/handlers/random-name';
+import * as randomNameController from '@handlers/random-name';
 
 const mockGetRandom = jest.fn();
-jest.mock('../../../src/application/use-cases', () => ({
+jest.mock('@application/use-cases', () => ({
   randomName: {
     getRandom: () => mockGetRandom(),
   },
