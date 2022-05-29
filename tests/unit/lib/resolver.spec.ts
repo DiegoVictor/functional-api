@@ -1,15 +1,15 @@
 import faker from '@faker-js/faker';
 
-import { clear, resolve } from '../../../src/application/services/resolve';
+import { clear, resolve } from '@lib/resolver';
 
 const mockFactory = jest.fn();
-jest.mock('../../../src/infra/factories', () => ({
-  factories: {
+jest.mock('@config/dependencies', () => ({
+  dependencies: {
     TestFactory: () => mockFactory(),
   },
 }));
 
-describe('resolve', () => {
+describe('resolver', () => {
   beforeEach(() => {
     clear();
   });
