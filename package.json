@@ -9,8 +9,9 @@
     "node": "14"
   },
   "scripts": {
-    "build": "tsc --project build.json",
-    "dev:server": "nodemon --watch src --ext js,ts --exec \"npm run build && node dist/frameworks/http/server.js\"",
+    "build": "tsc --project build.json && cp dist/frameworks/firebase/index.js dist && tsconfig-replace-paths --project build.json",
+    "watch": "nodemon --watch src --ext js,ts --exec \"npm run build\"",
+    "serve": "cp package.json .runtimeconfig.json dist && firebase emulators:start --only functions",
     "test": "jest --runInBand"
   },
   "devDependencies": {
@@ -32,6 +33,7 @@
     "prettier": "^2.6.0",
     "ts-jest": "^28.0.2",
     "ts-node": "^10.7.0",
+    "tsconfig-replace-paths": "0.0.11",
     "typescript": "^4.7.2"
   },
   "dependencies": {
