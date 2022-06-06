@@ -19,5 +19,6 @@
       "@lib/*": ["lib/*"]
     }
   },
-  "include": ["src", "tests"]
+  "include": ["src", "tests"],
+  "exclude": ["scripts"]
 }
