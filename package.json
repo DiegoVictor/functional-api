@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "babel --extensions .ts,.js src --out-dir dist --source-maps --copy-files",
+    "deploy": "firebase deploy --only functions",
     "watch": "nodemon --watch src --ext js,ts --exec \"npm run build\"",
     "serve": "cp package.json dist && firebase emulators:start --only functions",
     "test": "jest --runInBand"
