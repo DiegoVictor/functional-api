@@ -9,9 +9,9 @@
     "node": "14"
   },
   "scripts": {
-    "build": "tsc --project build.json && cp dist/frameworks/firebase/index.js dist && tsconfig-replace-paths --project build.json",
+    "build": "babel --extensions .ts,.js src --out-dir dist --source-maps --copy-files",
     "watch": "nodemon --watch src --ext js,ts --exec \"npm run build\"",
-    "serve": "cp package.json .runtimeconfig.json dist && firebase emulators:start --only functions",
+    "serve": "cp package.json dist && firebase emulators:start --only functions",
     "test": "jest --runInBand"
   },
   "devDependencies": {
