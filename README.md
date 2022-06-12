@@ -107,7 +107,7 @@ route|HTTP Method|params|description
 ---|---|---|---
 `/featureFlags`|GET| - |Returns all flags in the database.
 `/featureFlags/:key`|GET| `key` of the flag.|Returns the specified flag.
-`/randomNames`|GET| - | Returns random names, raw text or in base64 format.
+`/randomNames`|GET| - | Returns random names in raw text or in base64 format (depends if the flag is enable or not).
 
 # Running the tests
 [Jest](https://jestjs.io/) was the choice to test the app, to run:
