@@ -1,8 +1,8 @@
 {
-  "name": "api-huddle",
+  "name": "functional-api",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:DiegoVictor/api-huddle.git",
+  "repository": "git@github.com:DiegoVictor/functional-api.git",
   "author": "Diego Victor <diegovictorgonzaga@gmail.com>",
   "license": "MIT",
   "engines": {
