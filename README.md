@@ -1,5 +1,5 @@
 # Functional API
-[![Travis](https://img.shields.io/travis/com/DiegoVictor/functional-api?logo=travis&style=flat-square)](https://app.travis-ci.com/github/DiegoVictor/functional-api)
+[![Travis](https://img.shields.io/travis/com/DiegoVictor/functional-api?branch=main&logo=travis&style=flat-square)](https://app.travis-ci.com/github/DiegoVictor/functional-api)
 [![firebase](https://img.shields.io/static/v1?label=firebase&message=10.2.0&color=ffca28&logo=firebase)](https://firebase.google.com/)
 [![babel](https://img.shields.io/badge/babel-7.18.2-F9DC3E?style=flat-square&logo=babel)](https://babeljs.io/)
 [![prettier](https://img.shields.io/badge/prettier-2.6.0-F7B93E?style=flat-square&logo=prettier)](https://prettier.io/)
@@ -8,7 +8,7 @@
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
 [![jest](https://img.shields.io/badge/jest-28.1.0-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
 [![typescript](https://img.shields.io/badge/typescript-4.7.2-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![coverage](https://img.shields.io/codecov/c/gh/DiegoVictor/functional-api?logo=codecov&style=flat-square)](https://codecov.io/gh/DiegoVictor/functional-api)
+[![coverage](https://img.shields.io/codecov/c/gh/DiegoVictor/functional-api?logo=codecov&style=flat-square)](https://app.codecov.io/gh/DiegoVictor/functional-api)
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/functional-api/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
 [![Run in Insomnia](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Functional%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Ffunctional-api%2Fmain%2FInsomnia_2022-06-11.json)
@@ -21,6 +21,7 @@ Study Case to figure out a simple way to have dependency injection and dependenc
 * [Installing](#installing)
   * [Firebase](#firebase)
     * [Service Account](#service-account)
+    * [Script](#script)
 * [Development](#development)
 * [Usage](#usage)
   * [Deploy](#deploy)
@@ -53,10 +54,17 @@ Create a service account:
 
 * [Service Account](https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk?authuser=0)
 
-Then save it in `src\config\service-account.json`, now your are ready to go.
+Then save it in `src\config\service-account.json`.
+
+### Script
+There is a script (`scripts/main.js`) that setup a feature flag required by the application, to run:
+```
+$ node scripts/main.js
+```
+Now your are ready to go
 
 # Development
-Improve the development velocity running the `watch` script to [build](#build) the project everytime a file changes.
+Improve the development velocity running the `watch` script to rebuild the project everytime a file in `src` folder changes.
 ```
 npm run watch
 ```
