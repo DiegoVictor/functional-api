@@ -1,5 +1,5 @@
 # Functional API
-[![Travis](https://img.shields.io/travis/com/DiegoVictor/functional-api?branch=main&logo=travis&style=flat-square)](https://app.travis-ci.com/github/DiegoVictor/functional-api)
+[![AppVeyor](https://img.shields.io/appveyor/build/diegovictor/functional-api?logo=appveyor&style=flat-square)](https://ci.appveyor.com/project/DiegoVictor/functional-api)
 [![firebase](https://img.shields.io/static/v1?label=firebase&message=10.2.0&color=ffca28&logo=firebase)](https://firebase.google.com/)
 [![babel](https://img.shields.io/badge/babel-7.18.2-F9DC3E?style=flat-square&logo=babel)](https://babeljs.io/)
 [![prettier](https://img.shields.io/badge/prettier-2.6.0-F7B93E?style=flat-square&logo=prettier)](https://prettier.io/)
