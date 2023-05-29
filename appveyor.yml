@@ -1,0 +1,13 @@
+version: 1.0.{build}
+image: Ubuntu
+install:
+  - sh: npm ci
+build: off
+test_script:
+  - sh: npm run test
+on_success:
+  - sh: |
+      curl -Os https://uploader.codecov.io/latest/linux/codecov
+
+      chmod +x codecov
+      ./codecov
