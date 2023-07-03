@@ -1,4 +1,4 @@
-import faker from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 
 import { clear, resolve } from '@lib/resolver';
 
@@ -15,7 +15,7 @@ describe('resolver', () => {
   });
 
   it('should be able to resolve dependency', () => {
-    const value = faker.datatype.uuid();
+    const value = faker.string.uuid();
     mockFactory.mockReturnValueOnce(value);
 
     expect(resolve('TestFactory')).toBe(value);
@@ -27,7 +27,7 @@ describe('resolver', () => {
   });
 
   it('should be able to get a dependency already resolved', () => {
-    const value = faker.datatype.uuid();
+    const value = faker.string.uuid();
     mockFactory.mockReturnValue(value);
 
     expect(resolve('TestFactory')).toBe(value);

@@ -1,5 +1,5 @@
 import { randomUUID } from 'crypto';
-import faker from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 import { getMockRes, getMockReq } from '@jest-mock/express';
 
 import * as featureFlagController from '@handlers/feature-flag';

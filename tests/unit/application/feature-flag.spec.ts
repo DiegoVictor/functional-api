@@ -1,5 +1,5 @@
 import { randomUUID } from 'crypto';
-import faker from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 
 import * as featureFlag from '@application/use-cases/feature-flag';
 

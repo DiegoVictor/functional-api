@@ -1,4 +1,4 @@
-import faker from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 import { getMockRes, getMockReq } from '@jest-mock/express';
 
 import * as randomNameController from '@handlers/random-name';
