@@ -6,7 +6,7 @@
   "author": "Diego Victor <diegovictorgonzaga@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": "14"
+    "node": "16"
   },
   "scripts": {
     "build": "babel --extensions .ts,.js src --out-dir dist --source-maps --copy-files",
