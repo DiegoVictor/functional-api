@@ -1,12 +1,12 @@
 # Functional API
-[![AppVeyor](https://img.shields.io/appveyor/build/diegovictor/functional-api?logo=appveyor&style=flat-square)](https://ci.appveyor.com/project/DiegoVictor/functional-api)
-[![firebase](https://img.shields.io/static/v1?label=firebase&message=11.9.0&color=ffca28&logo=firebase)](https://firebase.google.com/)
-[![babel](https://img.shields.io/badge/babel-7.22.5-F9DC3E?style=flat-square&logo=babel)](https://babeljs.io/)
-[![prettier](https://img.shields.io/badge/prettier-2.8.8-F7B93E?style=flat-square&logo=prettier)](https://prettier.io/)
-[![nodemon](https://img.shields.io/badge/nodemon-2.0.22-76d04b?style=flat-square&logo=nodemon)](https://nodemon.io/)
-[![eslint](https://img.shields.io/badge/eslint-8.44.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
+[![buddy pipeline](https://app.buddy.works/diegovictor-github/functional-api/pipelines/pipeline/464183/badge.svg?token=c159fed54bb24f01312ce661e41d6d2194e77a116a43e096fa27e82d5b0245e0 "buddy pipeline")](https://app.buddy.works/diegovictor-github/functional-api/pipelines/pipeline/464183)
+[![firebase](https://img.shields.io/static/v1?label=firebase&message=11.10.1&color=ffca28&logo=firebase)](https://firebase.google.com/)
+[![babel](https://img.shields.io/badge/babel-7.22.10-F9DC3E?style=flat-square&logo=babel)](https://babeljs.io/)
+[![prettier](https://img.shields.io/badge/prettier-3.0.2-F7B93E?style=flat-square&logo=prettier)](https://prettier.io/)
+[![nodemon](https://img.shields.io/badge/nodemon-3.0.1-76d04b?style=flat-square&logo=nodemon)](https://nodemon.io/)
+[![eslint](https://img.shields.io/badge/eslint-8.47.0-4b32c3?style=flat-square&logo=eslint)](https://eslint.org/)
 [![airbnb-style](https://flat.badgen.net/badge/style-guide/airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript)
-[![jest](https://img.shields.io/badge/jest-29.5.0-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
+[![jest](https://img.shields.io/badge/jest-29.6.3-brightgreen?style=flat-square&logo=jest)](https://jestjs.io/)
 [![typescript](https://img.shields.io/badge/typescript-5.1.6-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![coverage](https://img.shields.io/codecov/c/gh/DiegoVictor/functional-api?logo=codecov&style=flat-square)](https://app.codecov.io/gh/DiegoVictor/functional-api)
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/functional-api/main/LICENSE)
@@ -30,7 +30,7 @@ Study Case to figure out a simple way to have dependency injection and dependenc
   * [Coverage report](#coverage-report)
 
 # Requirements
-  * Node.js ^14.19.0
+  * Node.js ^18.19.0
   * Firebase Account
     * [Functions](https://firebase.google.com/docs/functions)
     * [Firestore](https://firebase.google.com/docs/firestore)
