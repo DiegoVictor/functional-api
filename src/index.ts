@@ -1,8 +1,8 @@
-import * as functions from 'firebase-functions';
+import { onRequest } from 'firebase-functions/v2/https';
 import '@frameworks/firebase';
 
 import { featureFlags as featureFlagsFunction } from '@frameworks/functions/featureFlags';
 import { randomNames as randomNamesFunction } from '@frameworks/functions/randomNames';
 
-export const featureFlags = functions.https.onRequest(featureFlagsFunction);
-export const randomNames = functions.https.onRequest(randomNamesFunction);
+export const featureFlags = onRequest(featureFlagsFunction);
+export const randomNames = onRequest(randomNamesFunction);
