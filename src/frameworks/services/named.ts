@@ -3,7 +3,7 @@ import axios from 'axios';
 import { INameService } from '@application/contracts/INameService';
 
 const api = axios.create({
-  baseURL: 'https://named-api.herokuapp.com',
+  baseURL: 'https://named-api.onrender.com',
 });
 
 export const getNames: INameService['getNames'] = async (): Promise<string[]> =>
