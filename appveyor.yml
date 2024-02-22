@@ -4,6 +4,7 @@ install:
   - sh: npm ci
 test_script:
   - sh: npm run test
+build: off
 on_success:
   - sh: |
       curl -Os https://uploader.codecov.io/latest/linux/codecov
