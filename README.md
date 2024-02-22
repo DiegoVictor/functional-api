@@ -1,5 +1,5 @@
 # Functional API
-[![buddy pipeline](https://app.buddy.works/diegovictor-github/functional-api/pipelines/pipeline/464183/badge.svg?token=c159fed54bb24f01312ce661e41d6d2194e77a116a43e096fa27e82d5b0245e0 "buddy pipeline")](https://app.buddy.works/diegovictor-github/functional-api/pipelines/pipeline/464183)
+[![AppVeyor](https://img.shields.io/appveyor/build/diegovictor/functional-api?logo=appveyor&style=flat-square)](https://ci.appveyor.com/project/DiegoVictor/functional-api)
 [![firebase](https://img.shields.io/static/v1?label=firebase&message=11.10.1&color=ffca28&logo=firebase)](https://firebase.google.com/)
 [![babel](https://img.shields.io/badge/babel-7.22.11-F9DC3E?style=flat-square&logo=babel)](https://babeljs.io/)
 [![prettier](https://img.shields.io/badge/prettier-3.0.2-F7B93E?style=flat-square&logo=prettier)](https://prettier.io/)
