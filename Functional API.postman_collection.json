@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "487518e0-cde5-4430-8dcc-8d814ccec1ac",
+		"name": "Functional API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4346128"
+	},
+	"item": [
+		{
+			"name": "Names",
+			"item": [
+				{
+					"name": "Generate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/randomNames",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"randomNames"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feature Flag",
+			"item": [
+				{
+					"name": "Index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"if (Array.isArray(response) && response.length > 0) {\r",
+									"    const [{ key }] = response;\r",
+									"    pm.collectionVariables.set('key', key)\r",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/featureFlags",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"featureFlags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/featureFlags/{{key}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"featureFlags",
+								"{{key}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:5001/functional-api-773f4/us-central1"
+		},
+		{
+			"key": "key",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
