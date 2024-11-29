@@ -11,7 +11,7 @@
 [![coverage](https://img.shields.io/codecov/c/gh/DiegoVictor/functional-api?logo=codecov&style=flat-square)](https://app.codecov.io/gh/DiegoVictor/functional-api)
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://raw.githubusercontent.com/DiegoVictor/functional-api/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)<br>
-[![Run in Insomnia](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Functional%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Ffunctional-api%2Fmain%2FInsomnia_2022-06-11.json)
+[![Run in Insomnia](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Functional%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2FDiegoVictor%2Ffunctional-api%2Fmain%2FInsomnia_2024-11-28.json)
 
 Study Case to figure out a simple way to have dependency injection and dependency inversion principle using only functions (not classes here, sorry OOP guys).
 > This API makes usage of a external service that generates random names, see more in: [Named API](https://github.com/DiegoVictor/named-api) and [Named Web](https://github.com/DiegoVictor/named-web).
