@@ -1,7 +1,7 @@
 # Functional API
 [![AppVeyor](https://img.shields.io/appveyor/build/diegovictor/functional-api?logo=appveyor&style=flat-square)](https://ci.appveyor.com/project/DiegoVictor/functional-api)
 [![firestore](https://img.shields.io/badge/firestore-ffca28?style=flat-square&logo=firebase&logoColor=black)](https://firebase.google.com/)
-[![firebase](https://img.shields.io/static/v1?label=firebase&message=11.10.1&color=ffca28&logo=firebase)](https://firebase.google.com/)
+[![firebase](https://img.shields.io/static/v1?label=firebase&style=flat-square&message=11.10.1&color=ffca28&logo=firebase)](https://firebase.google.com/)
 [![babel](https://img.shields.io/badge/babel-7.22.11-F9DC3E?style=flat-square&logo=babel)](https://babeljs.io/)
 [![prettier](https://img.shields.io/badge/prettier-3.0.2-F7B93E?style=flat-square&logo=prettier)](https://prettier.io/)
 [![nodemon](https://img.shields.io/badge/nodemon-3.0.1-76d04b?style=flat-square&logo=nodemon)](https://nodemon.io/)
