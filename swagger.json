@@ -1,0 +1,140 @@
+{
+  "openapi":"3.0.2",
+  "info": {
+    "title":"Functional API",
+    "version":"1.0",
+    "license": {
+      "name": "MIT",
+      "url": "https://raw.githubusercontent.com/DiegoVictor/functional-api/refs/heads/main/LICENSE"
+    }
+  },
+  "servers": [
+    {
+      "url":"http://localhost:5001"
+    }
+  ],
+  "paths": {
+    "/featureFlags": {
+      "get": {
+        "tags": ["Feature Flags"],
+        "responses": {
+          "200": {
+            "description": "Returns all flags in the database.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FeatureFlag"
+                  }
+                },
+                "example": [
+                  {
+                    "id": "b9d9c104-07fb-4558-9c19-d33c2c19c6a2",
+                    "key": "allow_feedback",
+                    "description": "users can send feedback for the generated names",
+                    "active": true
+                  },
+                  {
+                    "id": "5685306d-be11-4517-92e3-c2f9e10285d7",
+                    "key": "allow_custom_datasets",
+                    "description": "allow users to upload custom datasets",
+                    "active": false
+                  },
+                  {
+                    "id": "c0d87b76-494b-483e-9b0e-b072cf57fbf6",
+                    "key": "encode_output",
+                    "description": "return raw text or base64",
+                    "active": true
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/featureFlags/{key}": {
+      "get": {
+        "tags": ["Feature Flags"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "key",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "tip"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the specified flag.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeatureFlag"
+                },
+                "example": {
+                  "id": "c0d87b76-494b-483e-9b0e-b072cf57fbf6",
+                  "key": "encode_output",
+                  "description": "return raw text or base64",
+                  "active": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/randomNames": {
+      "get": {
+        "tags": ["Random Names"],
+        "responses": {
+          "200": {
+            "description": "Returns random names in raw text or in base64 format (depends on a feature flag).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "example": [
+                  "conde skywalker",
+                  "lara undu",
+                  "plo koth",
+                  "onacondeddu",
+                  "horak",
+                  "ben skywalker"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "FeatureFlag": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
