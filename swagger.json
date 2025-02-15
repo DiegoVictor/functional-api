@@ -84,6 +84,24 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Feature flag Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "message": "Feature flag Not Found"
+                  }
+                }
+              }
+            }
           }
         }
       }
