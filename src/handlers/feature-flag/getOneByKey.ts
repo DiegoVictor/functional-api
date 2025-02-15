@@ -14,6 +14,6 @@ export const getOneByKey = async (
   }
 
   return response.status(404).json({
-    message: 'Feature flag not found',
+    message: 'Feature Flag Not Found',
   });
 };
